@@ -15,6 +15,9 @@ sys.path.append(script_dir)
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import asyncio
 import traceback
+import torch
+if os.name == 'nt':  # Only on Windows
+    torch.compile = lambda model, *args, **kwargs: model
 
 import augmentoolkit.utils.group_by_text
 

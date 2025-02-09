@@ -1,6 +1,7 @@
 import streamlit as st
 import yaml
 import os
+os.environ["TORCH_COMPILE"] = "0"
 import sys
 import subprocess
 import threading
@@ -66,7 +67,7 @@ def scan_folders_for_config():
                     "folder": folder,
                     "config": relative_path
                 })
-    
+    print(result)
     return result
 
 # Save the updated config to the YAML file

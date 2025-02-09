@@ -3,6 +3,7 @@ print("Augmentoolkit is starting to run! If this is your first time running this
 # Orchestrate and execute pipelines according to the super-config in order.
 import subprocess
 import os
+os.environ["TORCH_COMPILE"] = "0"
 import yaml
 import sys
 

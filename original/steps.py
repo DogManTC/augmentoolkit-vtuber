@@ -2,6 +2,7 @@ import random
 from bs4 import BeautifulSoup
 from logging import INFO
 import os
+os.environ["TORCH_COMPILE"] = "0"
 import json
 import re
 import sys
@@ -22,6 +23,10 @@ import glob
 import yaml
 from datasets import load_dataset
 
+
+import torch
+if os.name == 'nt':  # Only on Windows
+    torch.compile = lambda model, *args, **kwargs: model
 
 from augmentoolkit.utils.create_conv_starter import create_conv_starter
 from augmentoolkit.utils.extract_steps import extract_steps

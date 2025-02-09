@@ -1,8 +1,8 @@
 API:
   API_KEY: key3
-  BASE_URL: https://api.fireworks.ai/inference/v1
-  LARGE_LOGICAL_MODEL: accounts/fireworks/models/llama-v3p1-8b-instruct
-  LOGICAL_MODEL: accounts/fireworks/models/llama-v3p1-8b-instruct
+  BASE_URL: http://localhost:11434/v1
+  LARGE_LOGICAL_MODEL: hf.co/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF:Q4_K_M
+  LOGICAL_MODEL: hf.co/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF:Q4_K_M
   QUANTIZATION_LARGE: gptq
   QUANTIZATION_SMALL: gptq
 CLASSIFICATION:
